@@ -1,0 +1,20 @@
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-10">
+      <h2>Découvrez nos meilleures destinations cet été</h2>
+      <ul class="list-group">
+        <app-bestdest  *ngFor="let destination of destinations; let i = index"
+        [destinationName]="destination.name"
+        [destinationNote]="destination.note"
+        [index]="i"></app-bestdest>
+      </ul>
+    </div>
+    <div class="col-xs-2">
+      <h2>Cet article vous a-t-il été utile ?</h2> 
+      <button class="btn btn-success" (click)=good_opinion()>OUI</button>
+      &nbsp;
+      <button class="btn btn-danger"(click)=bad_opinion()>NON</button>
+    </div>
+  </div>
+</div>
